@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import createHistory from "history/createBrowserHistory"
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,30 +10,35 @@ class Video extends Component {
     this.state = {
       duarion: 0,
       currentTime: 0,
+      spot: '0:00'
     };
 
     this.hotspots = [
       {
         time: '0:10',
         description: 'AAAAAAA AAAAAAAA',
-        thumb: '/thumb0.jpg'
+        thumb: '/thumb0.jpg',
+        name: 'AAAA'
       },
       {
         time: '1:20',
         description: 'BBBBBBB BBBBBBBBBB',
-        thumb: '/thumb1.jpg'
+        thumb: '/thumb1.jpg',
+        name: 'BBBBB'
 
       },
       {
         time: '3:20',
         description: 'CCCCCCCC CCCCCCCCC',
-        thumb: '/thumb2.jpg'
+        thumb: '/thumb2.jpg',
+        name: 'CCCCCC'
 
       },
       {
         time: '4:20',
         description: 'DDDDDDDD DDDDDDDD',
-        thumb: '/thumb3.jpg'
+        thumb: '/thumb3.jpg',
+        name: 'DDDDD'
       }
     ]
   }
@@ -41,6 +47,17 @@ class Video extends Component {
     this.video.controls = false;
     this.video.play();
 
+    this.history = createHistory();
+
+    // Get the current location.
+    const location = this.history.location;
+
+    // Listen for changes to the current location.
+    this.history.listen((location, action) => {
+      if(location.state) {
+        this.seekSpot(location.state.spot)
+      }
+    })
 
     this.video.addEventListener('loadstart', () => {
       console.log('loadstart')
@@ -104,6 +121,12 @@ class Video extends Component {
     })
   }
 
+  seekSpot(time) {
+    const seconds = this.convertFormatedTimeToSeconds(time);
+    const percent = (seconds / this.video.duration) * 100;
+    this.seek(percent);
+  }
+
   seek(percent) {
     this.video.currentTime = (percent * this.video.duration) / 100;
   }
@@ -118,6 +141,10 @@ class Video extends Component {
   convertFormatedTimeToSeconds(time) {
     return time.split(':').reduce((acc, time) => (60 * acc) + +time);
   }
+  onClick(index, evt) {
+    this.history.push(`${this.hotspots[index].name}`, { spot: this.hotspots[index].time })
+
+  }
   render() {
     return (
       <div className="player">
@@ -129,9 +156,9 @@ class Video extends Component {
           <div ref={(current) => { this.current = current; }} className="current"></div>
           {
             this.hotspots.map((spot, index) => {
-              return <div className="spot" key={index} style={this.getSpotPosition(spot.time, this.state.duration)}>
+              return <div className="spot" onClick={this.onClick.bind(this, index)} key={index} style={this.getSpotPosition(spot.time, this.state.duration)}>
                 <div className="thumb">
-                  <img src={spot.thumb} width={200} height={150}/>
+                  <img src={spot.thumb} width={200} height={150} />
                   <p>{spot.description}</p>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './video.css';
 import Video from './Video';
 
 class App extends Component {

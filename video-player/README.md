@@ -23,7 +23,7 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 
-### `npm run server`
+### `npm run serve`
 
 Run a local server with the build files
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.

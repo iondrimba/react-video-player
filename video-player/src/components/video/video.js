@@ -18,7 +18,8 @@ class Video extends Component {
       duration: 0,
       currentPosition: 0,
       playing: false,
-      seeking: false
+      seeking: false,
+      width: 0
     };
   }
 
@@ -30,6 +31,14 @@ class Video extends Component {
     this.video.addEventListener('loadedmetadata', this.onLoadMetadata.bind(this));
 
     this.video.addEventListener('seeked', this.onSeeked.bind(this));
+
+    window.addEventListener('resize', this.onResize.bind(this));
+
+    this.onResize();
+  }
+
+  onResize() {
+    this.setState({ width: document.querySelector('.sliders').offsetWidth });
   }
 
   onLoadMetadata() {
@@ -103,7 +112,7 @@ class Video extends Component {
           <PlayPause onClick={this.onPlayPauseClick.bind(this)} playing={this.state.playing} />
         </div>
         <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} />
-        <HotSpotList hotSpots={this.props.hotSpots} onClick={this.onHotSpotClick.bind(this)} duration={this.state.duration} />
+        <HotSpotList hotSpots={this.props.hotSpots} width={this.state.width} onClick={this.onHotSpotClick.bind(this)} duration={this.state.duration} />
       </div>
     );
   }

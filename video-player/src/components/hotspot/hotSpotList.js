@@ -9,7 +9,7 @@ class HotSpotList extends Component {
       <div className="hotSpot-container">
         {
           this.props.hotSpots.map((spot, index) => {
-            return <HotSpot onClick={this.props.onClick.bind(this)} containerWidth={document.querySelector('.sliders').offsetWidth} spot={spot} duration={this.props.duration} key={index} />
+            return <HotSpot onClick={this.props.onClick.bind(this)} containerWidth={this.props.width} spot={spot} duration={this.props.duration} key={index} />
           })
         }
       </div>

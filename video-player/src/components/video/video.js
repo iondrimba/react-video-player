@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './video.css';
-import Star from '../star/star';
 import History from '../../helpers/history';
 import Seeker from '../seeker/seeker';
 import HotSpot from '../hotspot/hotSpot';

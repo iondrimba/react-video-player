@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import History from '../../helpers/history';
 import Seeker from '../seeker/seeker';
-import HotSpot from '../hotspot/hotSpot';
+import HotSpotList from '../hotspot/hotSpotList';
 import PlayPause from '../playPause/playPause';
-import './video.css';
 import seeker from '../seeker/seeker';
+import './video.css';
 
 class Video extends Component {
   constructor(props) {
@@ -15,12 +15,11 @@ class Video extends Component {
     this.history.onChange(this.seekSpot.bind(this));
 
     this.state = {
-      duarion: 0,
+      duration: 0,
       currentPosition: 0,
       playing: false,
       seeking: false
     };
-
   }
 
   componentDidMount() {
@@ -99,13 +98,7 @@ class Video extends Component {
           <PlayPause onClick={this.onPlayPauseClick.bind(this)} playing={this.state.playing} />
         </div>
         <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} />
-        <div className="hotSpot-container">
-          {
-            this.props.hotSpots.map((spot, index) => {
-              return <HotSpot onClick={this.onHotSpotClick.bind(this)} containerWidth={document.querySelector('.sliders').offsetWidth} spot={spot} duration={this.state.duration} key={index} />
-            })
-          }
-        </div>
+        <HotSpotList hotSpots={this.props.hotSpots} onClick={this.onHotSpotClick.bind(this)} duration={this.state.duration} />
       </div>
     );
   }

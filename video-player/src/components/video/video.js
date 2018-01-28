@@ -26,6 +26,11 @@ class Video extends Component {
 
     this.video.addEventListener('timeupdate', () => {
       this.setState({ currentPosition: percent(this.video.currentTime, this.video.duration) });
+
+      if (this.video.ended) {
+        this.setState({ playing: false, currentPosition: 0 });
+        this.history.update('/');
+      }
     })
 
     this.video.addEventListener('loadedmetadata', () => {

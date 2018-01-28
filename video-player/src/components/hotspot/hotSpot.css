@@ -1,4 +1,6 @@
 .spot {
+  margin-top: -10px;
+  margin-left: -15px;
   position: absolute;
   width: 30px;
 }

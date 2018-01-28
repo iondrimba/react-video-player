@@ -7,4 +7,5 @@
 
 .spot:hover .thumb {
   opacity: 1;
+  transform: rotate(0);
 }

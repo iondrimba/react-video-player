@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import './video.css';
-import './star.css';
-import Video from './Video';
+import Video from './components/video/video';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Video />
+        <Video source={"/assets/video/video.mp4"}/>
       </div>
     );
   }

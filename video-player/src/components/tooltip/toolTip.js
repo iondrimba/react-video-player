@@ -12,10 +12,10 @@ class ToolTip extends Component {
     if (this.props.animate) {
 
       //little trick to avoid setTimeout to display css animation
-      requestAnimationFrame(()=>{
-        requestAnimationFrame(()=>{
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
           if (this.toolTip) {
-            this.toolTip.classList.add('toolTip--animate');
+            this.toolTip.style = `opacity:1;transform: rotate(0deg) translateY(-97%)`;
           }
         });
       });

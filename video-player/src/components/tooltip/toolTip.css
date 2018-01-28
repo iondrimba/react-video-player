@@ -3,13 +3,13 @@
   background-color: #e1124d;
   width: auto;
   position: absolute;
-  top: -260px;
   pointer-events: none;
   left: -4px;
+  top: -100%;
   opacity: 0;
   color: #ffffff;
-  transform: rotate(20deg);
-  transform-origin: bottom left;
+  transform-origin: left bottom;
+  transform: rotate(20deg) translate(-39%, -93%);
   transition: .3s .1s;
 }
 
@@ -23,10 +23,4 @@
   top: 47px;
   position: relative;
   left: -10px;
-}
-
-
-.toolTip--animate {
-  opacity: 1;
-  transform: rotate(0);
 }

@@ -1,13 +1,13 @@
-.spot {
-  margin-top: -12px;
-  margin-left: -15px;
-  position: absolute;
-  width: 30px;
-}
-
-.hotSpot-container {
+.hotspot-container {
   position: absolute;
   position: absolute;
   bottom: 14px;
   z-index: 1;
+}
+
+.hotspot {
+  margin-top: -12px;
+  margin-left: -15px;
+  position: absolute;
+  width: 30px;
 }

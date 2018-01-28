@@ -38,7 +38,7 @@ class Video extends Component {
   }
 
   onResize() {
-    this.setState({ width: document.querySelector('.sliders').offsetWidth });
+    this.setState({ width: document.querySelector('.seeker').offsetWidth });
   }
 
   onLoadMetadata() {

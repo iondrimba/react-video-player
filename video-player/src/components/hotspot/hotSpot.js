@@ -41,7 +41,7 @@ class HotSpot extends Component {
   render() {
     return (
       <div ref={(spot) => { this.spot = spot; }}
-        className='spot'
+        className='hotspot'
         onClick={this.onClick.bind(this)}
         onMouseLeave={this.onMouseLeave.bind(this)}
         onMouseOver={this.onMouseOver.bind(this, this.props.spot)}

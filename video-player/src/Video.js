@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import createHistory from "history/createBrowserHistory"
 import logo from './logo.svg';
 import './App.css';
+import './star';
+import { Star } from './star';
 
 class Video extends Component {
   constructor(props) {
@@ -45,7 +47,7 @@ class Video extends Component {
 
   componentDidMount() {
     this.video.controls = false;
-    this.video.play();
+    //this.video.play();
 
     this.history = createHistory();
 
@@ -157,6 +159,7 @@ class Video extends Component {
           {
             this.hotspots.map((spot, index) => {
               return <div className="spot" onClick={this.onClick.bind(this, index)} key={index} style={this.getSpotPosition(spot.time, this.state.duration)}>
+                <Star/>
                 <div className="thumb">
                   <img src={spot.thumb} width={200} height={150} />
                   <p>{spot.description}</p>

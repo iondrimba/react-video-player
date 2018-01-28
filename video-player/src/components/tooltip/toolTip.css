@@ -3,9 +3,9 @@
   background-color: #e1124d;
   width: auto;
   position: absolute;
-  top: -270px;
+  top: -260px;
   pointer-events: none;
-  left: -5px;
+  left: -4px;
   opacity: 0;
   color: #ffffff;
   transform: rotate(20deg);

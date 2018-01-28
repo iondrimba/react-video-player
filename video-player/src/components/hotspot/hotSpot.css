@@ -4,8 +4,3 @@
   position: absolute;
   width: 30px;
 }
-
-.spot:hover .thumb {
-  opacity: 1;
-  transform: rotate(0);
-}

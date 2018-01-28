@@ -1,8 +1,9 @@
 
 import React, { Component } from 'react';
-import './hotSpot.css';
+import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import Star from '../star/star';
-import { convertFormatedTimeToSeconds } from '../../helpers/converter';
+import ToolTip from '../tooltip/toolTip';
+import './hotSpot.css';
 
 class HotSpot extends Component {
   constructor(props) {
@@ -11,8 +12,7 @@ class HotSpot extends Component {
 
   getSpotPosition(time, duration) {
     const seconds = convertFormatedTimeToSeconds(time);
-    const percent = (seconds / duration) * 100;
-    return { transform: `translateX(${(percent * 360) / 100}px)` };
+    return { transform: `translateX(${(percent(seconds, duration) * this.props.containerWidth) / 100}px)` };
   }
 
   onClick() {
@@ -21,12 +21,9 @@ class HotSpot extends Component {
 
   render() {
     return (
-      <div className="spot" onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
+      <div ref={(spot) => { this.spot = spot; }} className="spot" onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
         <Star />
-        <div className="thumb">
-          <img src={this.props.spot.thumb} width={200} height={150} />
-          <p>{this.props.spot.description}</p>
-        </div>
+        <ToolTip thumb={this.props.spot.thumb} description={this.props.spot.description} />
       </div>
     );
   }

@@ -25,31 +25,36 @@ class Video extends Component {
   componentDidMount() {
     this.video.controls = false;
 
-    this.video.addEventListener('timeupdate', () => {
-      this.setState({ currentPosition: percent(this.video.currentTime, this.video.duration) });
+    this.video.addEventListener('timeupdate', this.onTimeUpdate.bind(this));
 
-      if (this.video.ended) {
-        this.setState({ playing: false, currentPosition: 0 });
-        this.history.update('/');
-      }
-    });
+    this.video.addEventListener('loadedmetadata', this.onLoadMetadata.bind(this));
 
-    this.video.addEventListener('loadedmetadata', () => {
-      this.video.volume = .1;
-      this.setState({ duration: this.video.duration });
-    });
+    this.video.addEventListener('seeked', this.onSeeked.bind(this));
+  }
 
-    this.video.addEventListener('seeked', () => {
-      const interval = setTimeout(() => {
-        this.setState({ playing: true });
-        this.video.play();
+  onLoadMetadata() {
+    this.video.volume = .1;
+    this.setState({ duration: this.video.duration });
+  }
 
-        this.seeking.classList.remove('seeking-overlay--show');
+  onTimeUpdate() {
+    this.setState({ currentPosition: percent(this.video.currentTime, this.video.duration) });
 
-        clearTimeout(interval);
-      }, 300);
-    });
+    if (this.video.ended) {
+      this.setState({ playing: false, currentPosition: 0 });
+      this.history.update('/');
+    }
+  }
 
+  onSeeked() {
+    const interval = setTimeout(() => {
+      this.setState({ playing: true });
+      this.video.play();
+
+      this.seeking.classList.remove('seeking-overlay--show');
+
+      clearTimeout(interval);
+    }, 300);
   }
 
   seekSpot(time) {

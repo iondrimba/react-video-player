@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './video.css';
+import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import History from '../../helpers/history';
 import Seeker from '../seeker/seeker';
 import HotSpot from '../hotspot/hotSpot';
-import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
+import './video.css';
 
 class Video extends Component {
   constructor(props) {
@@ -14,8 +14,6 @@ class Video extends Component {
 
     this.state = {
       duarion: 0,
-      currentTime: 0,
-      spot: '0:00',
       currentPosition: 0,
     };
 
@@ -63,7 +61,7 @@ class Video extends Component {
         <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} >
           {
             this.props.hotSpots.map((spot, index) => {
-              return <HotSpot onClick={this.onHotSpotClick.bind(this)} spot={spot} duration={this.state.duration} key={index} />
+              return <HotSpot onClick={this.onHotSpotClick.bind(this)} containerWidth={document.querySelector('.sliders').offsetWidth} spot={spot} duration={this.state.duration} key={index} />
             })
           }
         </Seeker>

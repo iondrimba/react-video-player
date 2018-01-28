@@ -14,6 +14,10 @@ export default class History {
   }
 
   update(spot) {
-    this.history.push(`${spot.name}`, { spot: spot.time });
+    if (spot.name) {
+      this.history.push(`${spot.name}`, { spot: spot.time });
+    } else {
+      this.history.push(spot);
+    }
   }
 };

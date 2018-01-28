@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './video.css';
 import Star from '../star/star';
 import History from '../../helpers/history';
-import Seeker from '../seeker/seekr';
-import seekr from '../seeker/seekr';
+import Seeker from '../seeker/seeker';
+import HotSpot from '../hotspot/hotSpot';
+import convertFormatedTimeToSeconds from '../../helpers/converter';
 
 class Video extends Component {
   constructor(props) {
@@ -73,7 +74,7 @@ class Video extends Component {
   }
 
   seekSpot(time) {
-    const seconds = this.convertFormatedTimeToSeconds(time);
+    const seconds = convertFormatedTimeToSeconds(time);
     const percent = (seconds / this.video.duration) * 100;
     this.seek(percent);
   }
@@ -82,15 +83,6 @@ class Video extends Component {
     this.video.currentTime = (percent * this.video.duration) / 100;
   }
 
-  getSpotPosition(time, duration) {
-    const seconds = this.convertFormatedTimeToSeconds(time);
-    const percent = (seconds / duration) * 100;
-    const posX = (percent * 360) / 100;
-    return { transform: `translateX(${posX}px)` };
-  }
-  convertFormatedTimeToSeconds(time) {
-    return time.split(':').reduce((acc, time) => (60 * acc) + +time);
-  }
   onClick(index, evt) {
     this.history.update(this.state.hotSpots[index]);
   }
@@ -100,7 +92,14 @@ class Video extends Component {
         <video ref={(video) => { this.video = video; }}>
           <source src={this.props.source} type="video/mp4" />
         </video>
-        <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} />
+        <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} >
+          {
+            this.state.hotSpots.map((spot, index) => {
+              console.log(index);
+              return <HotSpot spot={spot} duration={this.state.duration} key={index} />
+            })
+          }
+        </Seeker>
         <button ref={(btnPlay) => { this.btnPlay = btnPlay }}>play</button>
         <button ref={(btnPause) => { this.btnPause = btnPause }}>pause</button>
       </div>

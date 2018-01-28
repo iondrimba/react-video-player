@@ -4,16 +4,6 @@
 }
 
 
-
-.spot {
-  position: absolute;
-  width: 30px;
-}
-
-.spot:hover .thumb {
-  opacity: 1;
-}
-
 .thumb {
   padding: 10px;
   background-color: antiquewhite;

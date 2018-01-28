@@ -4,3 +4,10 @@
   position: absolute;
   width: 30px;
 }
+
+.hotSpot-container {
+  position: absolute;
+  position: absolute;
+  bottom: 14px;
+  z-index: 1;
+}

@@ -41,8 +41,13 @@ class HotSpot extends Component {
 
   render() {
     return (
-      <div ref={(spot) => { this.spot = spot; }} className="spot" onMouseLeave={this.onMouseLeave.bind(this)} onMouseOver={this.onMouseOver.bind(this, this.props.spot)} onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
-        <Star />
+      <div ref={(spot) => { this.spot = spot; }}
+        className="spot"
+        onClick={this.onClick.bind(this)}
+        onMouseLeave={this.onMouseLeave.bind(this)}
+        onMouseOver={this.onMouseOver.bind(this, this.props.spot)}
+        style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
+        <Star/>
         {this.toolTip()}
       </div>
     );

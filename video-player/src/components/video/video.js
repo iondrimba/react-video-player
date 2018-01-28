@@ -73,18 +73,17 @@ class Video extends Component {
   }
 
   seekSpot(time) {
-    const seconds = convertFormatedTimeToSeconds(time);
-    const percent = (seconds / this.video.duration) * 100;
-    this.seek(percent);
+    this.seek((convertFormatedTimeToSeconds(time) / this.video.duration) * 100);
   }
 
   seek(percent) {
     this.video.currentTime = (percent * this.video.duration) / 100;
   }
 
-  onClick(index, evt) {
-    this.history.update(this.state.hotSpots[index]);
+  onHotSpotClick(spot, evt) {
+    this.history.update(spot);
   }
+
   render() {
     return (
       <div className="player">
@@ -94,8 +93,7 @@ class Video extends Component {
         <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} >
           {
             this.state.hotSpots.map((spot, index) => {
-              console.log(index);
-              return <HotSpot spot={spot} duration={this.state.duration} key={index} />
+              return <HotSpot onClick={this.onHotSpotClick.bind(this)} spot={spot} duration={this.state.duration} key={index} />
             })
           }
         </Seeker>

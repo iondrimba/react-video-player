@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-import '../tooltip/toolTip.css';
+import './styles.css';
 
 class ToolTip extends Component {
   constructor(props) {

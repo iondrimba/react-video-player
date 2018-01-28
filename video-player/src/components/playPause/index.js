@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import './playPause.css';
+import './styles.css';
 
 class PlayPause extends Component {
   constructor(props) {

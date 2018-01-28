@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import History from '../../helpers/history';
-import Seeker from '../seeker/seeker';
+import Seeker from '../seeker';
 import HotSpotList from '../hotspot';
-import PlayPause from '../playPause/playPause';
-import seeker from '../seeker/seeker';
-import './video.css';
+import PlayPause from '../playPause';
+import seeker from '../seeker';
+import './styles.css';
 
 class Video extends Component {
   constructor(props) {

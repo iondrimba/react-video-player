@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './seeker.css';
+import './styles.css';
 
 class Seeker extends Component {
   constructor(props) {

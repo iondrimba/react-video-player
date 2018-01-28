@@ -1,5 +1,5 @@
 import React from 'react';
-import './star.css';
+import './styles.css';
 
 const Star = () => {
   return (

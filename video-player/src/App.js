@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Video from './components/video/video';
-import './App.css';
+import Video from './components/video';
+import './app.css';
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Video source={"/assets/video/video.mp4"} hotSpots={this.state.hotSpots} />
       </div>
     );

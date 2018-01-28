@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
-import Star from '../star/star';
-import ToolTip from '../tooltip/toolTip';
+import Star from '../star';
+import ToolTip from '../tooltip';
 
 class HotSpot extends Component {
   constructor(props) {

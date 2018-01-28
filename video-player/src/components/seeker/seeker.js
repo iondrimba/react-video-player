@@ -17,7 +17,6 @@ class Seeker extends Component {
       <div onClick={this.onClick.bind(this)} className="sliders">
         <div className="sliders__bg"></div>
         <div style={{ transform: `scaleX(${this.props.currentPosition / 100})` }} className="sliders__current"></div>
-        {this.props.children}
       </div>
     );
   }

@@ -15,6 +15,17 @@
   border-radius: 5px;
 }
 
+.sliders__mover {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(255, 0, 73, .45);
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: top left;
+  z-index: 1;
+}
+
 
 .sliders__current {
   position: absolute;

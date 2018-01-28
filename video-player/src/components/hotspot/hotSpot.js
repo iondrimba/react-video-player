@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import './hotSpot.css';
 import Star from '../star/star';
-import convertFormatedTimeToSeconds from '../../helpers/converter';
+import { convertFormatedTimeToSeconds } from '../../helpers/converter';
 
 class HotSpot extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class HotSpot extends Component {
   render() {
     return (
       <div className="spot" onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
-       <Star/>
+        <Star />
         <div className="thumb">
           <img src={this.props.spot.thumb} width={200} height={150} />
           <p>{this.props.spot.description}</p>

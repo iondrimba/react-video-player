@@ -1,4 +1,4 @@
-.sliders {
+.seeker {
   position: relative;
   width: 100%;
   height: 5px;
@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 
-.sliders__bg {
+.seeker__bg {
   position: absolute;
   width: inherit;
   height: inherit;
@@ -15,7 +15,7 @@
   border-radius: 5px;
 }
 
-.sliders__mover {
+.seeker__mover {
   position: absolute;
   width: inherit;
   height: inherit;
@@ -27,7 +27,7 @@
 }
 
 
-.sliders__current {
+.seeker__current {
   position: absolute;
   width: inherit;
   height: inherit;

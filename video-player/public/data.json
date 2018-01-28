@@ -1,27 +1,27 @@
 [
   {
     "time": "0:10",
-    "description": "AAAAAAA AAAAAAAA",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "thumb": "/assets/images/thumb0.jpg",
     "name": "AAAA"
   },
   {
     "time": "1:20",
-    "description": "BBBBBBB BBBBBBBBBB",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "thumb": "/assets/images/thumb1.jpg",
     "name": "BBBBB"
 
   },
   {
     "time": "3:20",
-    "description": "CCCCCCCC CCCCCCCCC",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "thumb": "/assets/images/thumb2.jpg",
     "name": "CCCCCC"
 
   },
   {
     "time": "4:20",
-    "description": "DDDDDDDD DDDDDDDD",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "thumb": "/assets/images/thumb3.jpg",
     "name": "DDDDD"
   }

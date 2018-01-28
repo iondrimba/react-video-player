@@ -60,9 +60,12 @@ class Video extends Component {
   render() {
     return (
       <div className="player">
-        <video ref={(video) => { this.video = video; }}>
-          <source src={this.props.source} type="video/mp4" />
-        </video>
+        <div className="video-container">
+          <video className="video" ref={(video) => { this.video = video; }}>
+            <source src={this.props.source} type="video/mp4" />
+          </video>
+          <PlayPause onClick={this.onPlayPauseClick.bind(this)} playing={this.state.playing} />
+        </div>
         <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} >
           {
             this.props.hotSpots.map((spot, index) => {
@@ -70,7 +73,6 @@ class Video extends Component {
             })
           }
         </Seeker>
-        <PlayPause onClick={this.onPlayPauseClick.bind(this)} playing={this.state.playing} />
       </div>
     );
   }

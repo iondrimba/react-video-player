@@ -26,7 +26,6 @@ class PlayPause extends Component {
           <circle cx="141.7" cy="141.7" r="137.5" className="button__bg" />
           <g xmlns="http://www.w3.org/2000/svg"><rect height="150" width="40" x="85" y="65"></rect><rect height="150" width="40" x="150" y="65"></rect></g>
         </svg>
-
       </div >
     );
   }

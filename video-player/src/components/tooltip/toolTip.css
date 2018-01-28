@@ -1,10 +1,26 @@
-
 .thumb {
   padding: 10px;
-  background-color: antiquewhite;
+  background-color: #e1124d;
   width: auto;
   position: absolute;
-  top: -240px;
-  opacity: 0;
+  top: -270px;
   pointer-events: none;
+  left: -5px;
+  opacity: 0;
+  color: #ffffff;
+  transform: rotate(20deg);
+  transform-origin: bottom left;
+  transition: .3s;
+}
+
+.thumb::after {
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #e1124d;
+  top: 47px;
+  position: relative;
+  left: -10px;
 }

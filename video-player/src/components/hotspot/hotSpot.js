@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import Star from '../star/star';
 import ToolTip from '../tooltip/toolTip';
-import './hotSpot.css';
 
 class HotSpot extends Component {
   constructor(props) {

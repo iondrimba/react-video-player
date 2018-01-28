@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import History from '../../helpers/history';
 import Seeker from '../seeker/seeker';
-import HotSpotList from '../hotspot/hotSpotList';
+import HotSpotList from '../hotspot';
 import PlayPause from '../playPause/playPause';
 import seeker from '../seeker/seeker';
 import './video.css';

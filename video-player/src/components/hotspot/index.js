@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import HotSpot from './hotSpot';
-import './hotSpot.css';
+import './styles.css';
 
 class HotSpotList extends Component {
   render() {

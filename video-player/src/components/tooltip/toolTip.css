@@ -1,4 +1,4 @@
-.thumb {
+.toolTip {
   padding: 10px;
   background-color: #e1124d;
   width: auto;
@@ -10,10 +10,10 @@
   color: #ffffff;
   transform: rotate(20deg);
   transform-origin: bottom left;
-  transition: .3s;
+  transition: .3s .1s;
 }
 
-.thumb::after {
+.toolTip::after {
   width: 0;
   height: 0;
   content: '';
@@ -23,4 +23,10 @@
   top: 47px;
   position: relative;
   left: -10px;
+}
+
+
+.toolTip--animate {
+  opacity: 1;
+  transform: rotate(0);
 }

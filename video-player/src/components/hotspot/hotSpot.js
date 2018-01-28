@@ -31,19 +31,19 @@ class HotSpot extends Component {
     this.setState({ spot: {} });
   }
 
-  thumb() {
-    let thumb = null;
+  toolTip() {
+    let toolTip = null;
     if (this.state.spot.name) {
-      thumb = <ToolTip thumb={this.state.spot.thumb} description={this.state.spot.description} />
+      toolTip = <ToolTip animate={true} thumb={this.state.spot.thumb} description={this.state.spot.description} />
     }
-    return thumb;
+    return toolTip;
   }
 
   render() {
     return (
       <div ref={(spot) => { this.spot = spot; }} className="spot" onMouseLeave={this.onMouseLeave.bind(this)} onMouseOver={this.onMouseOver.bind(this, this.props.spot)} onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
         <Star />
-        {this.thumb()}
+        {this.toolTip()}
       </div>
     );
   }

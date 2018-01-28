@@ -1,6 +1,6 @@
 .toolTip {
   padding: 10px;
-  background-color: #e1124d;
+  background-color: var(--main-color);
   width: auto;
   position: absolute;
   pointer-events: none;
@@ -23,7 +23,7 @@
   content: '';
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid #e1124d;
+  border-top: 20px solid var(--main-color);
   top: 47px;
   position: relative;
   left: -10px;

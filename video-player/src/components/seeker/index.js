@@ -27,10 +27,10 @@ class Seeker extends Component {
 
   render() {
     return (
-      <div className="sliders" onClick={this.onClick.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)} onMouseMove={this.onMouseMove.bind(this)}>
-        <div className="sliders__bg"></div>
-        <div className="sliders__mover" style={{ transform: `scaleX(${this.state.moverPosition})` }}></div>
-        <div className="sliders__current" style={{ transform: `scaleX(${this.props.currentPosition / 100})` }} ></div>
+      <div className='sliders' onClick={this.onClick.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)} onMouseMove={this.onMouseMove.bind(this)}>
+        <div className='sliders__bg'></div>
+        <div className='sliders__mover' style={{ transform: `scaleX(${this.state.moverPosition})` }}></div>
+        <div className='sliders__current' style={{ transform: `scaleX(${this.props.currentPosition / 100})` }} ></div>
       </div>
     );
   }

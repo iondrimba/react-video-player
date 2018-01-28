@@ -1,6 +1,6 @@
 .star {
   width: 100%;
-  fill: #e1124d;
+  fill: var(--main-color);
   cursor: pointer;
   z-index: 1;
 }

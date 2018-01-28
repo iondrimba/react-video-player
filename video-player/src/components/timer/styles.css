@@ -8,3 +8,8 @@
   padding: 4px;
   text-align: center;
 }
+
+
+.timer--hide {
+  opacity: 0;
+}

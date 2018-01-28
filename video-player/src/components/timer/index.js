@@ -9,7 +9,7 @@ class Timer extends Component {
 
   render() {
     return (
-      <div className='timer' style={{ transform: `translateX(${this.props.position-30}px)` }}>
+      <div className={this.props.display ? 'timer' : 'timer timer--hide'} style={{ transform: `translateX(${this.props.position - 30}px)` }}>
         {this.props.time}
       </div >
     );

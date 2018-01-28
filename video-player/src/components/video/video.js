@@ -3,7 +3,7 @@ import './video.css';
 import History from '../../helpers/history';
 import Seeker from '../seeker/seeker';
 import HotSpot from '../hotspot/hotSpot';
-import convertFormatedTimeToSeconds from '../../helpers/converter';
+import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 
 class Video extends Component {
   constructor(props) {
@@ -17,45 +17,15 @@ class Video extends Component {
       currentTime: 0,
       spot: '0:00',
       currentPosition: 0,
-      hotSpots: [
-        {
-          time: '0:10',
-          description: 'AAAAAAA AAAAAAAA',
-          thumb: '/assets/images/thumb0.jpg',
-          name: 'AAAA'
-        },
-        {
-          time: '1:20',
-          description: 'BBBBBBB BBBBBBBBBB',
-          thumb: '/assets/images/thumb1.jpg',
-          name: 'BBBBB'
-
-        },
-        {
-          time: '3:20',
-          description: 'CCCCCCCC CCCCCCCCC',
-          thumb: '/assets/images/thumb2.jpg',
-          name: 'CCCCCC'
-
-        },
-        {
-          time: '4:20',
-          description: 'DDDDDDDD DDDDDDDD',
-          thumb: '/assets/images/thumb3.jpg',
-          name: 'DDDDD'
-        }
-      ]
     };
 
   }
 
   componentDidMount() {
     this.video.controls = false;
-    //this.video.play();
 
     this.video.addEventListener('timeupdate', () => {
-      const percent = (this.video.currentTime / this.video.duration) * 100;
-      this.setState({ currentPosition: percent });
+      this.setState({ currentPosition: percent(this.video.currentTime, this.video.duration) });
     })
 
     this.video.addEventListener('loadedmetadata', () => {
@@ -73,7 +43,7 @@ class Video extends Component {
   }
 
   seekSpot(time) {
-    this.seek((convertFormatedTimeToSeconds(time) / this.video.duration) * 100);
+    this.seek(percent(convertFormatedTimeToSeconds(time), this.video.duration));
   }
 
   seek(percent) {
@@ -92,7 +62,7 @@ class Video extends Component {
         </video>
         <Seeker onSeek={this.seek.bind(this)} currentPosition={this.state.currentPosition} >
           {
-            this.state.hotSpots.map((spot, index) => {
+            this.props.hotSpots.map((spot, index) => {
               return <HotSpot onClick={this.onHotSpotClick.bind(this)} spot={spot} duration={this.state.duration} key={index} />
             })
           }

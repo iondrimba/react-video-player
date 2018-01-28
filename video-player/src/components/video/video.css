@@ -2,14 +2,3 @@
   width: 360px;
   margin: 0 auto;
 }
-
-
-.thumb {
-  padding: 10px;
-  background-color: antiquewhite;
-  width: auto;
-  position: absolute;
-  top: -240px;
-  opacity: 0;
-  pointer-events: none;
-}

@@ -1,3 +1,10 @@
 :root {
   --main-color: #e1124d;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}

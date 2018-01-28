@@ -3,6 +3,7 @@ import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import History from '../../helpers/history';
 import Seeker from '../seeker/seeker';
 import HotSpot from '../hotspot/hotSpot';
+import PlayPause from '../playPause/playPause';
 import './video.css';
 
 class Video extends Component {
@@ -15,6 +16,7 @@ class Video extends Component {
     this.state = {
       duarion: 0,
       currentPosition: 0,
+      playing: false,
     };
 
   }
@@ -30,14 +32,6 @@ class Video extends Component {
       this.video.volume = .1;
       this.setState({ duration: this.video.duration });
     })
-
-    this.btnPlay.addEventListener('click', () => {
-      this.video.play();
-    })
-
-    this.btnPause.addEventListener('click', () => {
-      this.video.pause();
-    })
   }
 
   seekSpot(time) {
@@ -50,6 +44,17 @@ class Video extends Component {
 
   onHotSpotClick(spot, evt) {
     this.history.update(spot);
+  }
+
+  onPlayPauseClick(playing) {
+
+    this.setState({ playing: playing });
+
+    if (this.state.playing) {
+      this.video.pause();
+    } else {
+      this.video.play();
+    }
   }
 
   render() {
@@ -65,8 +70,7 @@ class Video extends Component {
             })
           }
         </Seeker>
-        <button ref={(btnPlay) => { this.btnPlay = btnPlay }}>play</button>
-        <button ref={(btnPause) => { this.btnPause = btnPause }}>pause</button>
+        <PlayPause onClick={this.onPlayPauseClick.bind(this)} playing={this.state.playing} />
       </div>
     );
   }

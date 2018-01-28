@@ -1,4 +1,4 @@
-.playPause {
+.play-pause {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -8,15 +8,11 @@
   transition: .3s;
 }
 
-.playPause:hover {
+.play-pause:hover {
   opacity: 1;
 }
 
-.pause {
-  background-color: aliceblue;
-}
-
-.button {
+.play-pause .button {
   width: 100px;
   cursor: pointer;
   position: absolute;
@@ -25,15 +21,15 @@
   left: 50%;
 }
 
-.button__bg {
+.play-pause .button__bg {
   fill: #ffffff;
 }
 
-.button__icon {
+.play-pause .button__icon {
   fill: #000000;
 }
 
-.hide {
+.play-pause .hide {
   opacity: 0;
   pointer-events: none;
 }

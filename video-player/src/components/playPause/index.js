@@ -17,7 +17,7 @@ class PlayPause extends Component {
 
   render() {
     return (
-      <div className='playPause'  >
+      <div className='play-pause'>
         <svg onClick={this.onPlayClick.bind(this)} className={`button ${this.props.playing ? 'hide' : ''}`} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 283.5 283.5'>
           <circle cx='141.7' cy='141.7' r='137.5' className='button__bg' />
           <path d='M113.6 78.1L201.8 141.7 113.6 205.4' className='button__icon' />

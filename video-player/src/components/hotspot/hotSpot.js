@@ -8,6 +8,10 @@ import './hotSpot.css';
 class HotSpot extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      spot: {}
+    }
   }
 
   getSpotPosition(time, duration) {
@@ -19,11 +23,27 @@ class HotSpot extends Component {
     this.props.onClick(this.props.spot);
   }
 
+  onMouseOver(spot) {
+    this.setState({ spot });
+  }
+
+  onMouseLeave() {
+    this.setState({ spot: {} });
+  }
+
+  thumb() {
+    let thumb = null;
+    if (this.state.spot.name) {
+      thumb = <ToolTip thumb={this.state.spot.thumb} description={this.state.spot.description} />
+    }
+    return thumb;
+  }
+
   render() {
     return (
-      <div ref={(spot) => { this.spot = spot; }} className="spot" onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
+      <div ref={(spot) => { this.spot = spot; }} className="spot" onMouseLeave={this.onMouseLeave.bind(this)} onMouseOver={this.onMouseOver.bind(this, this.props.spot)} onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
         <Star />
-        <ToolTip thumb={this.props.spot.thumb} description={this.props.spot.description} />
+        {this.thumb()}
       </div>
     );
   }

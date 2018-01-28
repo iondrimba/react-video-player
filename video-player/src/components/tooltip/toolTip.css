@@ -13,6 +13,10 @@
   transition: .3s .1s cubic-bezier(.23, 1, .32, 1);
 }
 
+.toolTip__bg {
+  background-color: aliceblue;
+}
+
 .toolTip::after {
   width: 0;
   height: 0;

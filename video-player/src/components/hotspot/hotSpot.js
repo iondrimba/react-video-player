@@ -15,9 +15,13 @@ class HotSpot extends Component {
     return { transform: `translateX(${(percent * 360) / 100}px)` };
   }
 
+  onClick() {
+    this.props.onClick(this.props.spot);
+  }
+
   render() {
     return (
-      <div className="spot" style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
+      <div className="spot" onClick={this.onClick.bind(this)} style={this.getSpotPosition(this.props.spot.time, this.props.duration)}>
        <Star/>
         <div className="thumb">
           <img src={this.props.spot.thumb} width={200} height={150} />

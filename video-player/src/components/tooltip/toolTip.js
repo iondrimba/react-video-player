@@ -10,13 +10,15 @@ class ToolTip extends Component {
 
   componentDidMount() {
     if (this.props.animate) {
-      let interval = setTimeout(() => {
-        clearTimeout(interval);
-        if (this.toolTip) {
-          this.toolTip.classList.add('toolTip--animate');
-        }
 
-      }, 50);
+      //little trick to avoid setTimeout to display css animation
+      requestAnimationFrame(()=>{
+        requestAnimationFrame(()=>{
+          if (this.toolTip) {
+            this.toolTip.classList.add('toolTip--animate');
+          }
+        });
+      });
     }
   }
 

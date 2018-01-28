@@ -10,7 +10,7 @@
   color: #ffffff;
   transform-origin: left bottom;
   transform: rotate(20deg) translate(-39%, -93%);
-  transition: .3s .1s;
+  transition: .3s .1s cubic-bezier(.23, 1, .32, 1);
 }
 
 .toolTip::after {

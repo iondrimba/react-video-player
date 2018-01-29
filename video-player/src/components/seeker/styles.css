@@ -8,6 +8,17 @@
   margin-top: 10px;
 }
 
+.seeker__knob {
+  width: 15px;
+  height: 15px;
+  background-color: #888888;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  z-index: 2;
+}
+
 .seeker__bg {
   position: absolute;
   width: inherit;

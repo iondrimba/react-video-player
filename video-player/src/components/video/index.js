@@ -16,9 +16,8 @@ class Video extends Component {
 
     this.state = {
       duration: 0,
-      currentPosition: 0,
+      currentPositionPercentual: 0,
       playing: false,
-      seeking: false,
       width: 0
     };
   }
@@ -46,10 +45,10 @@ class Video extends Component {
   }
 
   onTimeUpdate() {
-    this.setState({ currentPosition: percent(this.video.currentTime, this.video.duration)});
+    this.setState({ currentPositionPercentual: percent(this.video.currentTime, this.video.duration)});
 
     if (this.video.ended) {
-      this.setState({ playing: false, currentPosition: 0 });
+      this.setState({ playing: false, currentPositionPercentual: 0 });
       this.history.update('/');
     }
   }
@@ -110,7 +109,7 @@ class Video extends Component {
           <div ref={(seeking) => { this.seeking = seeking; }} className='seeking-overlay'></div>
           <PlayPause onClick={this.onPlayPauseClick.bind(this)} playing={this.state.playing} />
         </div>
-        <Seeker onSeek={this.seek.bind(this)} duration={this.state.duration} currentPosition={this.state.currentPosition} />
+        <Seeker onSeek={this.seek.bind(this)} duration={this.state.duration} width={this.state.width} currentPositionPercentual={this.state.currentPositionPercentual} />
         <HotSpotList hotSpots={this.props.hotSpots} width={this.state.width} onClick={this.onHotSpotClick.bind(this)} duration={this.state.duration} />
       </div>
     );

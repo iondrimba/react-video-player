@@ -35,9 +35,10 @@ class Seeker extends Component {
     return (
       <div className='seeker' onClick={this.onClick.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)} onMouseMove={this.onMouseMove.bind(this)}>
         <Timer time={this.state.time} display={this.state.display} position={this.state.mousePosition} />
+        <div className='seeker__knob' style={{ transform: `translateX(${(this.props.currentPositionPercentual * this.props.width) / 100 - 5}px)` }} onMouseDown={this.onMouseDown.bind(this)} onMouseMove={this.onKnobMove.bind(this)}></div>
         <div className='seeker__bg'></div>
         <div className='seeker__mover' style={{ transform: `scaleX(${this.state.scale})` }}></div>
-        <div className='seeker__current' style={{ transform: `scaleX(${this.props.currentPosition / 100})` }} ></div>
+        <div className='seeker__current' style={{ transform: `scaleX(${this.props.currentPositionPercentual / 100})` }} ></div>
       </div>
     );
   }

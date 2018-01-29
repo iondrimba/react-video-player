@@ -12,6 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "serve": "./node_modules/.bin/serve -s build",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   }
 }

@@ -42,7 +42,6 @@ class Video extends Component {
   }
 
   onLoadMetadata() {
-    this.video.volume = .1;
     this.setState({ duration: this.video.duration });
   }
 

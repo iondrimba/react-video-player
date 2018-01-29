@@ -24,9 +24,9 @@ class ToolTip extends Component {
 
   render() {
     return (
-      <div ref={(toolTip) => { this.toolTip = toolTip; }} className='toolTip'>
-        <img className='toolTip__bg' src={this.props.thumb} width={200} height={150} />
-        <p>{this.props.description}</p>
+      <div ref={(toolTip) => { this.toolTip = toolTip; }} className='tool-tip'>
+        <img className='tool-tip__image' src={this.props.thumb} width={200} height={150} />
+        <p className='tool-tip__description'>{this.props.description}</p>
       </div>
     );
   }

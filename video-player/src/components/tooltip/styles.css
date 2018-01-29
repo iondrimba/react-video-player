@@ -1,5 +1,5 @@
-.toolTip {
-  padding: 10px;
+.tool-tip {
+  padding: 10px 10px 0 10px;
   background-color: var(--main-color);
   width: auto;
   position: absolute;
@@ -13,18 +13,23 @@
   transition: .3s .1s cubic-bezier(.23, 1, .32, 1);
 }
 
-.toolTip__bg {
+.tool-tip__image {
   background-color: aliceblue;
 }
 
-.toolTip::after {
+.tool-tip__description {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.tool-tip::after {
   width: 0;
   height: 0;
   content: '';
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid var(--main-color);
-  top: 47px;
-  position: relative;
-  left: -10px;
+  top: 99.5%;
+  position: absolute;
+  left: 0;
 }

@@ -8,6 +8,12 @@
   margin-top: 10px;
 }
 
+.seeker__line {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
 .seeker__knob {
   width: 15px;
   height: 15px;
@@ -19,31 +25,21 @@
   z-index: 2;
 }
 
-.seeker__bg {
-  position: absolute;
-  width: inherit;
-  height: inherit;
+.seeker__line--bg {
   background-color: #cccccc;
   border-radius: 5px;
 }
 
-.seeker__mover {
-  position: absolute;
-  width: inherit;
-  height: inherit;
+.seeker__line--mover {
   background-color: rgba(255, 0, 73, .45);
   border-radius: 5px;
   transform: scaleX(0);
   transform-origin: top left;
-  z-index: 1;
 }
 
 
-.seeker__current {
-  position: absolute;
-  width: inherit;
-  height: inherit;
+.seeker__line--current {
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: top left;
   background-color: #888888;
 }

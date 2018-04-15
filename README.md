@@ -1,6 +1,7 @@
 # Playing with Html5 Video API
 ![Demo](https://raw.githubusercontent.com/iondrimba/images/master/video-player.PNG)
 
+# [LIVE DEMO](https://iondrimba.github.io/react-video-player/build/index.html)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

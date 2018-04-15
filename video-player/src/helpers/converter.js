@@ -15,7 +15,6 @@ export const convertSecondsToHHMMss = (totalSeconds) => {
   return `${hours}:${minutes}:${seconds}`;
 }
 
-
 export const percent = (current, total) => {
   return (current / total) * 100
 }

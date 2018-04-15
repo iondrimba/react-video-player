@@ -4,7 +4,6 @@ import History from '../../helpers/history';
 import Seeker from '../seeker';
 import HotSpotList from '../hotspot';
 import PlayPause from '../playPause';
-import seeker from '../seeker';
 import './styles.css';
 
 class Video extends Component {

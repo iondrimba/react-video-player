@@ -1,13 +1,7 @@
-
-
 import React, { Component } from 'react';
 import './styles.css';
 
 class ToolTip extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     if (this.props.animate) {
 

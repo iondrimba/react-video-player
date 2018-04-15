@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Video source={'/assets/video/video.mp4'} hotSpots={this.state.hotSpots} />
+        <Video source={'http://clips.vorwaerts-gmbh.de/VfE_html5.mp4'} hotSpots={this.state.hotSpots} />
       </div>
     );
   }

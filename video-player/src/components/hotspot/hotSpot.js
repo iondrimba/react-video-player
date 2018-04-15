@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { convertFormatedTimeToSeconds, percent } from '../../helpers/converter';
 import Star from '../star';
@@ -32,9 +31,11 @@ class HotSpot extends Component {
 
   toolTip() {
     let toolTip = null;
+
     if (this.state.spot.name) {
       toolTip = <ToolTip animate={true} thumb={this.state.spot.thumb} description={this.state.spot.description} />
     }
+
     return toolTip;
   }
 

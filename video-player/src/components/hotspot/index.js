@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import HotSpot from './hotSpot';
 import './styles.css';

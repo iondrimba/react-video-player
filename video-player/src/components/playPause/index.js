@@ -1,12 +1,7 @@
-
 import React, { Component } from 'react';
 import './styles.css';
 
 class PlayPause extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   onPlayClick() {
     this.props.onClick(true);
   }

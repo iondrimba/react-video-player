@@ -17,7 +17,7 @@
 .seeker__knob {
   width: 15px;
   height: 15px;
-  background-color: #888888;
+  background-color: #f5f703;
   border-radius: 50%;
   position: absolute;
   top: 15px;
@@ -31,7 +31,7 @@
 }
 
 .seeker__line--mover {
-  background-color: rgba(255, 0, 73, .45);
+  background-color: rgba(64, 255, 26, .92);
   border-radius: 5px;
   transform: scaleX(0);
   transform-origin: top left;
@@ -41,5 +41,5 @@
 .seeker__line--current {
   transform: scaleX(0);
   transform-origin: top left;
-  background-color: #888888;
+  background-color: #f5f703;
 }

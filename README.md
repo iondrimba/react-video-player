@@ -1,29 +1,36 @@
-# README #
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Below you will find some information on how to perform common tasks.
 
-### What is this repository for? ###
+## Project Details
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+ - Since I'm using create-react-app to build the project, I chose not to add sass/scss compiling pipeline to keep it simple
+ - All controls are responsive except for the hotspot thumbnail, I did not include the methods to calculate wether there is enough space to show (mobile view)
+ - I also did not include any volume controls
+ - The video control loads an external video file
+ - I chose to leave the configuration of the hotspots as an external .json file (build or public/data.json)
 
-### How do I get set up? ###
+## Available Scripts
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+In the project directory, you can run:
 
-### Contribution guidelines ###
+### `npm start`
 
-* Writing tests
-* Code review
-* Other guidelines
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Who do I talk to? ###
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-* Repo owner or admin
-* Other community or team contact
+### `npm run build`
+
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
+
+### `npm run serve`
+
+Run a local server with the build files
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.

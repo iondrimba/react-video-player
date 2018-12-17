@@ -1,4 +1,6 @@
 # Playing with Html5 Video API
+[![Build Status](https://travis-ci.org/iondrimba/react-video-player.svg?branch=master)](https://travis-ci.org/iondrimba/react-video-player)
+
 ![Demo](https://raw.githubusercontent.com/iondrimba/images/master/video-player.PNG)
 
 # [LIVE DEMO](https://iondrimba.github.io/react-video-player/build/index.html)

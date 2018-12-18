@@ -1,5 +1,5 @@
 # Playing with Html5 Video API
-[![Build Status](https://travis-ci.org/iondrimba/react-video-player.svg?branch=master)](https://travis-ci.org/iondrimba/react-video-player)
+[![Build Status](https://travis-ci.org/iondrimba/react-video-player.svg?branch=master)](https://travis-ci.org/iondrimba/react-video-player) [![Greenkeeper badge](https://badges.greenkeeper.io/iondrimba/react-video-player.svg)](https://greenkeeper.io/)
 
 ![Demo](https://raw.githubusercontent.com/iondrimba/images/master/video-player.PNG)
 

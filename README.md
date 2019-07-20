@@ -3,7 +3,7 @@
 
 ![Demo](https://raw.githubusercontent.com/iondrimba/images/master/video-player.PNG)
 
-# [LIVE DEMO](https://iondrimba.github.io/react-video-player/build/)
+# [LIVE DEMO](https://iondrimba.github.io/react-video-player/build/?cache=123)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

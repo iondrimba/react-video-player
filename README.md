@@ -1,9 +1,10 @@
 # Playing with Html5 Video API
+
 [![Build Status](https://travis-ci.org/iondrimba/react-video-player.svg?branch=master)](https://travis-ci.org/iondrimba/react-video-player) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=iondrimba/react-video-player)](https://dependabot.com)
 
 ![Demo](https://raw.githubusercontent.com/iondrimba/images/master/video-player.PNG)
 
-# [LIVE DEMO](https://iondrimba.github.io/react-video-player/build/?cache=123)
+## [LIVE DEMO](https://iondrimba.github.io/react-video-player/build/?cache=123)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

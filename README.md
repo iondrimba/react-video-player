@@ -1,6 +1,6 @@
 # Playing with Html5 Video API
 
-[![Build Status](https://travis-ci.org/iondrimba/react-video-player.svg?branch=master)](https://travis-ci.org/iondrimba/react-video-player) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=iondrimba/react-video-player)](https://dependabot.com)
+![Node.js CI](https://github.com/iondrimba/react-video-player/workflows/Node.js%20CI/badge.svg) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=iondrimba/react-video-player)](https://dependabot.com)
 
 ![Demo](https://raw.githubusercontent.com/iondrimba/images/master/video-player.PNG)
 

@@ -1,4 +1,4 @@
-# Playing with Html5 Video API
+# 📺 Playing with Html5 Video API
 
 ![Node.js CI](https://github.com/iondrimba/react-video-player/workflows/Node.js%20CI/badge.svg) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=iondrimba/react-video-player)](https://dependabot.com)
 

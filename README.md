@@ -2,7 +2,7 @@
 
 ![Node.js CI](https://github.com/iondrimba/react-video-player/workflows/Node.js%20CI/badge.svg) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=iondrimba/react-video-player)](https://dependabot.com)
 
-![Demo](https://raw.githubusercontent.com/iondrimba/images/main/video-player.PNG)
+![Demo](https://raw.githubusercontent.com/iondrimba/images/master/video-player.PNG)
 
 ## [LIVE DEMO](https://iondrimba.github.io/react-video-player/build/?cache=123)
 
